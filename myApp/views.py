@@ -28,7 +28,7 @@ def center(request):
 
 def centerLeft(request):
     if request.method == "GET":
-        carsVolume = getCenterLeft.getPieBrandData()
+        sortDict = getCenterLeft.getPieBrandData()
         return JsonResponse({
-            "carsVolume": carsVolume,
+            "sortDict": sortDict,
         })

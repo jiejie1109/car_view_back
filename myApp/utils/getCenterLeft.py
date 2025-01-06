@@ -7,7 +7,7 @@ import json
 import time
 from .getPublicData import *
 
-
+# 饼图
 def getPieBrandData():
     cars = list(getAllCars())
     carsVolume = {}
@@ -18,5 +18,6 @@ def getPieBrandData():
             carsVolume[str(i.brand)] += int(i.saleVolume)
 
     carsVolume = sorted(zip(carsVolume.values(), carsVolume.keys()), reverse=True)
-    # print(carsVolume)
-    return carsVolume
+    sortDict = [{'name': v, 'value': k} for k, v in carsVolume][:10]
+    # print(sortDict)
+    return sortDict
