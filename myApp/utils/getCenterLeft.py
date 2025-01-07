@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author  : DaiYuJie
-# @Time    : 2025/1/3 9:15
-# @File    : getCenterLeft.py
-# @Software: PyCharm
 import json
 import time
 from .getPublicData import *

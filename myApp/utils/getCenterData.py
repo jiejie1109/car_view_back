@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author  : DaiYuJie
-# @Time    : 2024/12/31 9:12
-# @File    : getCenterData.py
-# @Software: PyCharm
 
 import json
 import time
