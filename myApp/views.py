@@ -5,6 +5,8 @@ from .utils import getPublicData
 from .utils import getCenterLeft
 from .utils import getBottomLeftData
 from .utils import getCenterRightData
+from .utils import getCenterChangeData
+from .utils import getBottoRightData
 
 
 # Create your views here.
@@ -51,4 +53,25 @@ def centerRight(request):
         realDate = getCenterRightData.getPriceSortData()
         return JsonResponse({
             "realDate": realDate
+        })
+
+
+def centerRightChange(request, energyType):
+    if request.method == "GET":
+        oilData, electricData = getCenterChangeData.getCircleData()
+        realData = []
+        if energyType == 1:
+            realData = oilData
+        else:
+            realData = electricData
+        return JsonResponse({
+            'realData': realData
+        })
+
+
+def bottomRight(request):
+    if request.method == "GET":
+        carData = getBottoRightData.getRankData()
+        return JsonResponse({
+            "carData": carData
         })
