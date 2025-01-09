@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author  : DaiYuJie
-# @Time    : 2024/12/30 10:44
-# @File    : spiders.py.py
-# @Software: PyCharm
-
 import requests
 from lxml import etree
 import csv
